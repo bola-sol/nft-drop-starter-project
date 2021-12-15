@@ -87,7 +87,7 @@ const App = () => {
             rel="noreferrer"
           >{`Follow us on Twitter! `}</a>
           <img alt="Twitter Logo" className="discord-logo" src={discordLogo} />
-          <a>&nbsp;</a>
+
           <a
             className="footer-text"
             href={DISCORD_LINK}
