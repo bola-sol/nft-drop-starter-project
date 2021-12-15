@@ -30,9 +30,10 @@
 }
 
 .header {
+  font-family: 'Anton';
   margin: 0;
-  font-size: 50px;
-  font-weight: bold;
+  font-size: 80px;
+  font-weight: normal;
 }
 
 .sub-text {
