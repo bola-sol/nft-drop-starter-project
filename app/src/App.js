@@ -70,7 +70,7 @@ const App = () => {
     <div className="App">
       <div className="container">
         <div className="header-container">
-          <p className="header"><img src={logo} alt="Logo" /><br></br>RARE<span style={{ color: '#ff6682' }}>DON</span></p>
+          <p className="header"><img src={logo} alt="RareDon" href="https://raredon.io" /><br></br>RARE<span style={{ color: '#ff6682' }}>DON</span></p>
           <p className="sub-text">6,174 of the Rarest Dons, mint to join the gang!</p>
           {!walletAddress && renderNotConnectedContainer()}
         </div>
