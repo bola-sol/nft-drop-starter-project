@@ -4,6 +4,7 @@
   overflow: scroll;
   text-align: center;
   overflow: hidden;
+  background-image: url("./assets/background tile2.png");
 }
 
 .container {
@@ -83,6 +84,11 @@
 }
 
 .twitter-logo {
+  width: 35px;
+  height: 35px;
+}
+
+.discord-logo {
   width: 35px;
   height: 35px;
 }

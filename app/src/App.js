@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import twitterLogo from './assets/twitter-logo.svg';
+import discordLogo from './assets/Discord-Logo-Color.svg';
 import CandyMachine from './CandyMachine';
 import logo from './assets/logo.png';
 
 // Constants
-const TWITTER_HANDLE = '_buildspace';
+const TWITTER_HANDLE = 'RareDonNFT';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
+const DISCORD_LINK = 'https://discord.gg/dXxEqDCPdK'
 
 const App = () => {
   // State
@@ -83,7 +85,15 @@ const App = () => {
             href={TWITTER_LINK}
             target="_blank"
             rel="noreferrer"
-          >{`built on @${TWITTER_HANDLE}`}</a>
+          >{`Follow us on Twitter! `}</a>
+          <img alt="Twitter Logo" className="discord-logo" src={discordLogo} />
+          <a>&nbsp;</a>
+          <a
+            className="footer-text"
+            href={DISCORD_LINK}
+            target="_blank"
+            rel="noreferrer"
+          >{`Join our discord!`}</a>
         </div>
       </div>
     </div >
