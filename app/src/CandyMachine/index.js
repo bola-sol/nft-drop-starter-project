@@ -191,30 +191,30 @@ const CandyMachine = ({ walletAddress }) => {
       });
 
       console.log('txn:', txn);
-
-      setIsLoadingMints(true);
-
-      const data = await fetchHashTable(
-        process.env.REACT_APP_CANDY_MACHINE_ID,
-        true
-      );
-
-      if (data.length !== 0) {
-        for (const mint of data) {
-          // Get URI
-          const response = await fetch(mint.data.uri);
-          const parse = await response.json();
-          console.log("Past Minted NFT", mint)
-          // Get image URI
-          if (!mints.find((mint) => mint === parse.image)) {
-            setMints((prevState) => [...prevState, parse.image]);
-          }
-        }
-      }
-
-      // Remove loading flag.
-      setIsLoadingMints(false);
-
+      /*
+            setIsLoadingMints(true);
+      
+            const data = await fetchHashTable(
+              process.env.REACT_APP_CANDY_MACHINE_ID,
+              true
+            );
+      
+            if (data.length !== 0) {
+              for (const mint of data) {
+                // Get URI
+                const response = await fetch(mint.data.uri);
+                const parse = await response.json();
+                console.log("Past Minted NFT", mint)
+                // Get image URI
+                if (!mints.find((mint) => mint === parse.image)) {
+                  setMints((prevState) => [...prevState, parse.image]);
+                }
+              }
+            }
+      
+            // Remove loading flag.
+            setIsLoadingMints(false);
+      */
       // Setup listener
       connection.onSignatureWithOptions(
         txn,
