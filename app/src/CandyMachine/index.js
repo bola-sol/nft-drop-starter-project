@@ -31,6 +31,7 @@ const CandyMachine = ({ walletAddress }) => {
   const [mints, setMints] = useState([]);
   // Add these two state properties
   const [isMinting, setIsMinting] = useState(false);
+  const [mintSuccess, setMintSucess] = useState(false)
   const [isLoadingMints, setIsLoadingMints] = useState(false);
   // Actions
   const fetchHashTable = async (hash, metadataEnabled) => {
@@ -118,6 +119,7 @@ const CandyMachine = ({ walletAddress }) => {
     try {
       // Add this here
       setIsMinting(true);
+      setMintSucess(false);
       const mint = web3.Keypair.generate();
       const token = await getTokenWallet(
         walletAddress.publicKey,
@@ -227,6 +229,7 @@ const CandyMachine = ({ walletAddress }) => {
               console.log('NFT Minted!');
               // Set our flag to false as our NFT has been minted!
               setIsMinting(false);
+              setMintSucess(true);
               await getCandyMachineState();
             }
           }
@@ -390,6 +393,7 @@ const CandyMachine = ({ walletAddress }) => {
             {isMinting ? 'Minting...' : 'Mint NFT'}
           </button>
         )}
+        {mintSuccess && <p>Mint Success!</p>}
         {isLoadingMints && <p>LOADING MINTS...</p>}
         {mints.length > 0 && <p>Mint Success!</p>}
       </div>
