@@ -387,7 +387,7 @@ const CandyMachine = ({ walletAddress }) => {
             onClick={mintToken}
             disabled={isMinting}
           >
-            Mint NFT
+            {isMinting ? 'Minting...' : 'Mint NFT'}
           </button>
         )}
         {isLoadingMints && <p>LOADING MINTS...</p>}
