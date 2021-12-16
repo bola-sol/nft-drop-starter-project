@@ -73,7 +73,7 @@ const App = () => {
       <div className="container">
         <div className="header-container">
           <p className="header"><a href="https://raredon.io"><img src={logo} alt="RareDon" /></a><br></br>RARE<span style={{ color: '#ff6682' }}>DON</span></p>
-          <p className="sub-text">6,174 of the Rarest Dons, mint to join the gang!</p>
+          <p className="sub-text">6,174 of the Rarest Dons, mint for 0.45 SOL to join the gang!</p>
           {!walletAddress && renderNotConnectedContainer()}
         </div>
         {/* Check for walletAddress and then pass in walletAddress */}
